@@ -321,7 +321,7 @@ namespace vsg
     // provide Array3D<>::accept() implementation
     template<typename T>
     void Array3D<T>::accept(Visitor& visitor) { visitor.apply(*this); }
-    
+
     // provide ArrayCube<>::accept() implementation
     template<typename T>
     void ArrayCube<T>::accept(Visitor& visitor) { visitor.apply(*this); }

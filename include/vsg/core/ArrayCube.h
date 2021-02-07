@@ -24,7 +24,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 #define VSG_arrayCube(N, T) \
     using N = ArrayCube<T>; \
-    template<>            \
+    template<>              \
     constexpr const char* type_name<N>() noexcept { return "vsg::" #N; }
 
 namespace vsg
@@ -306,19 +306,19 @@ namespace vsg
     VSG_arrayCube(uintArrayCube, uint32_t);
     VSG_arrayCube(floatArrayCube, float);
     VSG_arrayCube(doubleArrayCube, double);
-             
+
     VSG_arrayCube(vec2ArrayCube, vec2);
     VSG_arrayCube(vec3ArrayCube, vec3);
     VSG_arrayCube(vec4ArrayCube, vec4);
-             
+
     VSG_arrayCube(dvec2ArrayCube, dvec2);
     VSG_arrayCube(dvec3ArrayCube, dvec3);
     VSG_arrayCube(dvec4ArrayCube, dvec4);
-             
+
     VSG_arrayCube(ubvec2ArrayCube, ubvec2);
     VSG_arrayCube(ubvec3ArrayCube, ubvec3);
     VSG_arrayCube(ubvec4ArrayCube, ubvec4);
-             
+
     VSG_arrayCube(block64ArrayCube, block64);
     VSG_arrayCube(block128ArrayCube, block128);
 

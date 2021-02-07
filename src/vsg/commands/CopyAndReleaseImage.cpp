@@ -111,7 +111,7 @@ void CopyAndReleaseImage::CopyData::record(CommandBuffer& commandBuffer) const
 
         for (uint32_t mipLevel = 0; mipLevel < mipLevels; ++mipLevel)
         {
-			// std::cout<<"   level = "<<mipLevel<<", mipWidth = "<<mipWidth<<", mipHeight = "<<mipHeight<<std::endl;
+            // std::cout<<"   level = "<<mipLevel<<", mipWidth = "<<mipWidth<<", mipHeight = "<<mipHeight<<std::endl;
             const size_t faceSize = static_cast<size_t>(faceWidth * faceHeight * faceDepth * valueSize);
 
             for (uint32_t face = 0; face < numFaces; ++face)
@@ -128,7 +128,7 @@ void CopyAndReleaseImage::CopyData::record(CommandBuffer& commandBuffer) const
                 region.imageExtent = {mipWidth, mipHeight, mipDepth};
 
                 offset += faceSize;
-            }           
+            }
 
             if (mipWidth > 1) mipWidth /= 2;
             if (mipHeight > 1) mipHeight /= 2;
@@ -306,7 +306,7 @@ void CopyAndReleaseImage::CopyData::record(CommandBuffer& commandBuffer) const
 
         for (auto face = 0u; face < numFaces; face++)
         {
-            auto &region = regions[face];
+            auto& region = regions[face];
             region.bufferOffset = source.offset + face * faceSize;
             region.bufferRowLength = 0;
             region.bufferImageHeight = 0;
